@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Bright University</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        /* Custom styles for this page */
+        .hero-slide {
+            height: 400px;
+            object-fit: cover;
+        }
+        .news-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        .news-card-img {
+            height: 180px;
+            object-fit: cover;
+        }
+        .category-title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .category-title:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #0d6efd;
+        }
+        .ad-box {
+            background: #f8f9fa;
+            border: 1px dashed #dee2e6;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .ad-box img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Build Bright University</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#admissions">Admissions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programs">Academics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#campus">Campus Life</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search programs">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider with Auto-Play -->
+    <div id="heroSlider" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1470&q=80" class="d-block w-100 hero-slide" alt="University students in lecture hall">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Welcome to Build Bright University</h5>
+                    <p>Inspiring ambitious minds with world-class academic and campus life.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1605&q=80" class="d-block w-100 hero-slide" alt="University campus building and students">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Campus Where Ideas Grow</h5>
+                    <p>Beautiful grounds, collaborative spaces, and a vibrant student community.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1470&q=80" class="d-block w-100 hero-slide" alt="University students studying together">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <h5>Academic Excellence in Action</h5>
+                    <p>Classrooms, labs, and mentorship that shape the leaders of tomorrow.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <section id="about" class="mb-5">
+                    <h3 class="category-title">About Build Bright University</h3>
+                    <p class="lead">Build Bright University is a leading higher education destination focused on research, innovation, and global impact. We support undergraduate, graduate, and professional scholars with transformative teaching and a dynamic campus culture.</p>
+                </section>
+
+                <section class="mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded shadow" alt="Students learning together">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="category-title">Academic Experience</h3>
+                            <p>At Build Bright University, learners collaborate across disciplines, conduct research, and engage with leading faculty to advance ideas that matter.</p>
+                            <p>Our academic environment blends rigorous lecture halls, innovation labs, and experiential learning opportunities to prepare graduates for leadership in a changing world.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h3 class="category-title">University News</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1471&q=80" class="card-img-top news-card-img" alt="New academic year">
+                                <div class="card-body">
+                                    <h6 class="card-title">New Academic Year Launches</h6>
+                                    <p class="mb-1">Brightfield welcomes first-year and returning students with new research centers and expanded scholarships.</p>
+                                    <small class="text-muted">Today</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1470&q=80" class="card-img-top news-card-img" alt="Research symposium">
+                                <div class="card-body">
+                                    <h6 class="card-title">Innovation Symposium</h6>
+                                    <p class="mb-1">Faculty and students present cutting-edge research at our annual interdisciplinary symposium.</p>
+                                    <small class="text-muted">2 days ago</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1470&q=80" class="card-img-top news-card-img" alt="Campus wellness">
+                                <div class="card-body">
+                                    <h6 class="card-title">Campus Wellness Fair</h6>
+                                    <p class="mb-1">Students and staff gather for wellness resources, fitness workshops, and community activities.</p>
+                                    <small class="text-muted">5 days ago</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?auto=format&fit=crop&w=1470&q=80" class="card-img-top news-card-img" alt="Arts showcase">
+                                <div class="card-body">
+                                    <h6 class="card-title">Arts & Culture Showcase</h6>
+                                    <p class="mb-1">The university highlights student performances, exhibitions, and collaborative arts projects.</p>
+                                    <small class="text-muted">1 week ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="programs" class="mb-5">
+                    <h3 class="category-title">Featured Programs</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1470&q=80" class="card-img-top news-card-img" alt="STEM Program">
+                                <div class="card-body">
+                                    <h5 class="card-title">STEM Education</h5>
+                                    <p>Hands-on science, engineering, technology, and math courses with modern facilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1470&q=80" class="card-img-top news-card-img" alt="Arts Program">
+                                <div class="card-body">
+                                    <h5 class="card-title">Arts & Creativity</h5>
+                                    <p>Visual arts, music, theater, and digital media programs for creative learners.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1470&q=80" class="card-img-top news-card-img" alt="Athletics Program">
+                                <div class="card-body">
+                                    <h5 class="card-title">Athletics & Wellness</h5>
+                                    <p>Competitive teams, fitness classes, and wellness programs keep students healthy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1470&q=80" class="card-img-top news-card-img" alt="Leadership Program">
+                                <div class="card-body">
+                                    <h5 class="card-title">Leadership & Service</h5>
+                                    <p>Community service and leadership development prepare students to make a difference.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="campus" class="mb-5">
+                    <h3 class="category-title">Upcoming Campus Events</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Orientation Week</h5>
+                                    <p class="mb-1">New students explore campus life, academic resources, and student organizations.</p>
+                                    <small class="text-muted">September 1, 2026</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Research Symposium</h5>
+                                    <p class="mb-1">Graduate scholars present interdisciplinary research with faculty mentors.</p>
+                                    <small class="text-muted">September 22, 2026</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Arts & Innovation Showcase</h5>
+                                    <p class="mb-1">Students exhibit creative work and collaborative multimedia projects.</p>
+                                    <small class="text-muted">October 5, 2026</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Career Fair</h5>
+                                    <p class="mb-1">Top employers connect with students pursuing careers in technology, business, and government.</p>
+                                    <small class="text-muted">October 14, 2026</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Quick Links</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#admissions" class="text-decoration-none">Admissions</a></li>
+                            <li class="list-group-item"><a href="#programs" class="text-decoration-none">Academic Programs</a></li>
+                            <li class="list-group-item"><a href="#campus" class="text-decoration-none">Campus Life</a></li>
+                            <li class="list-group-item"><a href="#contact" class="text-decoration-none">Contact Us</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">Faculty Directory</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Campus Highlights</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Modern classrooms
+                                <span class="badge bg-primary rounded-pill">New</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                24/7 library access
+                                <span class="badge bg-primary rounded-pill">Top</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Robotics lab
+                                <span class="badge bg-primary rounded-pill">STEM</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Music & arts studio
+                                <span class="badge bg-primary rounded-pill">Creative</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Outdoor sports fields
+                                <span class="badge bg-primary rounded-pill">Active</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm" id="contact">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Stay Informed</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Sign up to receive university news, events, and admissions updates.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4">
+                    <h5>Build Bright University</h5>
+                    <p>Build Bright University empowers ambitious scholars with research-driven learning, creative inquiry, and global connections.</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#admissions" class="text-white text-decoration-none">Admissions</a></li>
+                        <li><a href="#programs" class="text-white text-decoration-none">Programs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@buildbrightuniversity.edu</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Location: 123 Elm Street, Springfield</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h5>Connect With Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Facebook</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Twitter</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Instagram</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2026 Build Bright University. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with Bootstrap 5</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
