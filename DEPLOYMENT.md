@@ -9,8 +9,9 @@ Use the Git repository root `website-app/website-app` when creating the Render s
 The included `render.yaml` can be used as a Render Blueprint. It creates:
 
 - Docker web service: `website-app-backend`
-- PostgreSQL database: `website-app-db`
 - Generated Laravel app secret: `RENDER_APP_SECRET`
+
+Render does not provide managed MySQL. Use an external MySQL database and set the MySQL environment variables in Render.
 
 1. Create a new Render Web Service.
 2. Set the runtime to Docker, or create a Blueprint from `render.yaml`.
@@ -22,10 +23,10 @@ The included `render.yaml` can be used as a Render Blueprint. It creates:
    - `APP_KEY=<output of php artisan key:generate --show>` if you are not using the Blueprint-generated `RENDER_APP_SECRET`.
    - `APP_URL=https://your-render-service.onrender.com`
    - `ASSET_URL=https://your-render-service.onrender.com`
-   - `DB_CONNECTION=mysql` for an external MySQL database, or `pgsql` for Render Postgres.
-   - `DATABASE_URL=<database connection URL>` if your database provider gives one.
+   - `DB_CONNECTION=mysql`
+   - `DATABASE_URL=<database connection URL>` if your MySQL provider gives one.
    - `DB_HOST=<database host>`
-   - `DB_PORT=<database port>`
+   - `DB_PORT=3306`
    - `DB_DATABASE=<database name>`
    - `DB_USERNAME=<database user>`
    - `DB_PASSWORD=<database password>`
