@@ -13,6 +13,19 @@ The included `render.yaml` can be used as a Render Blueprint. It creates:
 
 Render does not provide managed MySQL. Use an external MySQL database and set the MySQL environment variables in Render.
 
+Local MySQL settings:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=website_app
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+These values work only on your local machine. On Render, `127.0.0.1` means the Render container itself, not your computer, so production needs a MySQL host that Render can reach.
+
 1. Create a new Render Web Service.
 2. Set the runtime to Docker, or create a Blueprint from `render.yaml`.
 3. Set the Dockerfile path to `Dockerfile`.
