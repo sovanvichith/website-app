@@ -35,6 +35,7 @@ DB_PORT=20604
 DB_DATABASE=defaultdb
 DB_USERNAME=avnadmin
 DB_PASSWORD=<your Aiven password>
+MYSQL_ATTR_SSL_CA=/etc/ssl/certs/ca-certificates.crt
 ```
 
 Remove `DATABASE_URL` from Render unless you prefer using the full Aiven service URI. Do not commit the service URI or password to Git.
@@ -56,6 +57,7 @@ Remove `DATABASE_URL` from Render unless you prefer using the full Aiven service
    - `DB_DATABASE=<database name>`
    - `DB_USERNAME=<database user>`
    - `DB_PASSWORD=<database password>`
+   - `MYSQL_ATTR_SSL_CA=/etc/ssl/certs/ca-certificates.crt` for Aiven MySQL SSL.
    - `SESSION_DRIVER=database`
    - `CACHE_STORE=database`
    - `QUEUE_CONNECTION=database`
