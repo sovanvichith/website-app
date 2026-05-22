@@ -26,6 +26,19 @@ DB_PASSWORD=
 
 These values work only on your local machine. On Render, `127.0.0.1` means the Render container itself, not your computer, so production needs a MySQL host that Render can reach.
 
+Aiven MySQL settings for Render:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=mysql-24c7b82c-tk-06c9.f.aivencloud.com
+DB_PORT=20604
+DB_DATABASE=defaultdb
+DB_USERNAME=avnadmin
+DB_PASSWORD=<your Aiven password>
+```
+
+Remove `DATABASE_URL` from Render unless you prefer using the full Aiven service URI. Do not commit the service URI or password to Git.
+
 1. Create a new Render Web Service.
 2. Set the runtime to Docker, or create a Blueprint from `render.yaml`.
 3. Set the Dockerfile path to `Dockerfile`.
