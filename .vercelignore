@@ -1,0 +1,6 @@
+*
+!vercel.json
+!public/
+public/*
+!public/frontend/
+!public/frontend/**
