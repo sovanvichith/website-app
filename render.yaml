@@ -1,0 +1,38 @@
+services:
+  - type: web
+    runtime: docker
+    name: website-app-backend
+    plan: free
+    region: singapore
+    branch: main
+    healthCheckPath: /
+    autoDeployTrigger: commit
+    envVars:
+      - key: APP_NAME
+        value: Build Bright University
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: RENDER_APP_SECRET
+        generateValue: true
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DATABASE_URL
+        fromDatabase:
+          name: website-app-db
+          property: connectionString
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: QUEUE_CONNECTION
+        value: database
+
+databases:
+  - name: website-app-db
+    plan: free
+    region: singapore
+    databaseName: website_app
+    user: website_app
+    postgresMajorVersion: "17"

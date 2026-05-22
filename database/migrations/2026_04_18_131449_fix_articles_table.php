@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('description', 200)->change();
 
             // Drop unnecessary columns
+            $table->dropUnique(['slug']);
             $table->dropColumn('slug');
             $table->dropColumn('image');
         });
